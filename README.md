@@ -1,5 +1,7 @@
 # Zombie-IRC-Bot-Game
 
+# Install the IRC library using pip3
+pip3 install irc
 
 This is a zombie-themed IRC bot that connects to your IRC network via SSL. The bot adds an exciting twist to your channel by introducing random zombie spawns. Before running the script, make sure to change the IRC server information in the code provided at the bottom.
 
