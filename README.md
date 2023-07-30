@@ -1,6 +1,5 @@
 # Zombie-IRC-Bot-Game
 
-Certainly! Here's an updated version of the description that includes the random spawning of zombies into the IRC channel:
 
 This is a zombie-themed IRC bot that connects to your IRC network via SSL. The bot adds an exciting twist to your channel by introducing random zombie spawns. Before running the script, make sure to change the IRC server information in the code provided at the bottom.
 
