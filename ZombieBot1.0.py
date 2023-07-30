@@ -21,7 +21,7 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
         self.channel = channel
         self.zombies = {}
         self.scores = self.load_scores()
-        self.bullets = {}  # Record the bullet count of each user
+        self.bullets = {}  
         self.scheduler = sched.scheduler(time.time, time.sleep)
 
     def is_connected(self):
