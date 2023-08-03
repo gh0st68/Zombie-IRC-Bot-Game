@@ -9,7 +9,7 @@ The bot responds to specific commands initiated by users in the IRC channel:
 
 !shoot: This command allows users to shoot at a randomly spawning zombie. Users can use their bullets to take down the zombie, but they have a limited supply of bullets.
 
-!reload: When users run out of bullets, they must use the !reload command to replenish their ammunition. This action ensures they are prepared to take on the next zombie that appears.
+!reload: When users run out of bullets, they must use the !reload command to replenish their ammunition. Additionally, using the !reload command also repairs the gun, ensuring that it's in optimal condition. This action ensures they are prepared to take on the next zombie that appears, with a fully functional and loaded weapon, enhancing their chances of survival in the battle.
 
 !kills: The bot keeps track of users' scores, and users can use the !scores command to check their current standing.
 
