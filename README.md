@@ -1,3 +1,6 @@
+![zombiebot](https://github.com/gh0st68/Zombie-IRC-Bot-Game/assets/75190364/cba2a669-2987-4dbb-b963-ab6fab9b0796)
+
+
 # Zombie-IRC-Bot-Game
 
 # Install the IRC library using pip3
@@ -8,6 +11,7 @@ This is a zombie-themed IRC bot that connects to your IRC network via SSL. The b
 The bot responds to specific commands initiated by users in the IRC channel:
 
 !shoot: This command allows users to shoot at a randomly spawning zombie. Users can use their bullets to take down the zombie, but they have a limited supply of bullets.
+
 
 !reload: When users run out of bullets, they must use the !reload command to replenish their ammunition. Additionally, using the !reload command also repairs the gun, ensuring that it's in optimal condition. This action ensures they are prepared to take on the next zombie that appears, with a fully functional and loaded weapon, enhancing their chances of survival in the battle.
 
