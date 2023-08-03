@@ -11,9 +11,9 @@ The bot responds to specific commands initiated by users in the IRC channel:
 
 !reload: When users run out of bullets, they must use the !reload command to replenish their ammunition. This action ensures they are prepared to take on the next zombie that appears.
 
-!scores: The bot keeps track of users' scores, and users can use the !scores command to check their current standing.
+!kills: The bot keeps track of users' scores, and users can use the !scores command to check their current standing.
 
-Zombies will randomly spawn into the channel every 2 to 4 hours, creating an element of surprise and excitement for all participants. Users must be vigilant and ready to defend themselves when the undead menace appears.
+Zombies will randomly spawn into the channel every 1 to 2 hours, creating an element of surprise and excitement for all participants. Users must be vigilant and ready to defend themselves when the undead menace appears.
 
 With this zombie IRC bot, your channel becomes an interactive and thrilling battleground, where users can engage in action-packed gameplay and camaraderie while fending off hordes of zombies. Embrace the challenge and survive the relentless attacks of the undead in your virtual world!
 
