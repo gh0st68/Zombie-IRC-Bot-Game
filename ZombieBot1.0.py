@@ -13,6 +13,7 @@ import threading
 class ZombieBot(irc.bot.SingleServerIRCBot):
     def __init__(self, channel_list, nickname, server, port=6697):
         irc.client.ServerConnection.buffer_class = buffer.LenientDecodingLineBuffer
+
         factory = irc.connection.Factory(wrapper=ssl.wrap_socket)
         irc.bot.SingleServerIRCBot.__init__(self, [(server, port)], nickname, nickname, connect_factory=factory)
         self.channel_list = channel_list
@@ -65,7 +66,6 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
         parts = message.split()
         if not parts:
             return
-
         command = parts[0].lower()
 
         if command == "!shoot":
@@ -121,8 +121,8 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
                             else:
                                 shot_time = time.time() - zombie["spawn_time"]
                                 del self.zombies[channel_lower][zombie_id]
-                                self.scores[user] = self.scores.get(user, 0) + 1
-                                c.privmsg(channel, f"Great job, {user}! You killed boss zombie {zombie_id} in {shot_time:.2f} seconds! Your current score is now {self.scores[user]}.")
+                                self.scores[user] = self.scores.get(user, 0) + 2
+                                c.privmsg(channel, f"Great job, {user}! You killed boss zombie {zombie_id} in {shot_time:.2f} seconds! You get 2 points! Your current score is now {self.scores[user]}.")
                                 self.save_scores()
                         else:
                             shot_time = time.time() - zombie["spawn_time"]
@@ -192,7 +192,7 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
 
 def main():
     server = "irc.twistednet.org"
-    channel_list = ["#Twisted", "#dev"]  # Replace with your actual channel names
+    channel_list = ["#dev", "#Twisted"]  
     nickname = "Zombie"
     bot = ZombieBot(channel_list, nickname, server)
     bot.run()
