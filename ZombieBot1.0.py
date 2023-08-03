@@ -23,7 +23,6 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
         self.scores = {}
         self.bullets = {}
         self.original_channels = channel_list.copy()
-
         try:
             with open("killz", "r") as f:
                 data = json.load(f)
@@ -31,8 +30,7 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
                 self.bullets = data.get('bullets', {})
         except FileNotFoundError:
             pass
-
-        self.channel_last_cleanup = {channel: 0 for channel in channel_list}
+        self.channel_last_cleanup = {channel.lower(): 0 for channel in channel_list}
         self.is_running = False
         self.game_threads = []
 
@@ -43,9 +41,8 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
         c.nick(c.get_nickname() + "_")
 
     def on_welcome(self, c, e):
-        for channel in self.channel_list:
+        for channel in self.original_channels:
             c.join(channel)
-
         self.is_running = True
         for channel in self.channel_list:
             game_thread = threading.Thread(target=self.start_game_loop, args=(channel,))
@@ -59,7 +56,6 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
             if current_time - self.channel_last_cleanup[channel_lower] >= 600:
                 self.cleanup_zombies(channel_lower)
                 self.channel_last_cleanup[channel_lower] = current_time
-
             self.save_zombies_state()
             self.spawn_zombie(channel_lower)
             time.sleep(random.randint(1800, 3600))
@@ -98,19 +94,15 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
     def handle_shooting(self, c, e, parts):
         user = e.source.nick
         channel = e.target
-
         if self.bullets.get(user) == "exploded":
             c.privmsg(channel, f"Oh no, {user}! Your gun exploded! Type '!reload' to repair your gun.")
             return
-
         try:
             zombie_id = int(parts[1])
             if user not in self.bullets or self.bullets[user] <= 0:
                 c.privmsg(channel, f"{user}, you are out of bullets. Type '!reload' to reload your gun.")
                 return
-
             self.bullets[user] -= 1
-
             if random.random() < self.explosion_chance:
                 self.bullets[user] = "exploded"
                 c.privmsg(channel, f"Oh no, {user}! Your gun exploded!")
@@ -142,7 +134,6 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
                         c.privmsg(channel, f"Zombie {zombie_id} is not found. Keep an eye on the channel for more zombies!")
                 else:
                     c.privmsg(channel, f"Zombie {zombie_id} is not found. Keep an eye on the channel for more zombies!")
-
         except ValueError:
             c.privmsg(channel, "Invalid command format. Usage: !shoot <zombie_id>")
 
@@ -172,7 +163,6 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
     def cleanup_zombies(self, channel):
         if channel not in self.zombies:
             return
-
         current_time = time.time()
         zombies = self.zombies[channel]
         zombies_to_remove = [zombie_id for zombie_id, zombie in zombies.items() if current_time - zombie["spawn_time"] > 600]
@@ -202,9 +192,8 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
 
 def main():
     server = "irc.twistednet.org"
-    channel_list = ["#twisted", "#dev"]
+    channel_list = ["#Twisted", "#dev"]  # Replace with your actual channel names
     nickname = "Zombie"
-
     bot = ZombieBot(channel_list, nickname, server)
     bot.run()
 
