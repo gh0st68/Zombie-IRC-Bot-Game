@@ -65,7 +65,7 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
 
             self.save_zombies_state()
             self.spawn_zombie(channel_lower)
-            time.sleep(random.randint(1800, 3600))
+            time.sleep(random.randint(1800, 3600)) ##Zombie Spawn Rate
 
     def on_pubmsg(self, c, e):
         message = e.arguments[0].strip()
@@ -88,7 +88,7 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
 
     def spawn_zombie(self, channel):
         if self.is_connected():
-            zombie_id = random.randint(1000, 9999) ### SPAWN RATE
+            zombie_id = random.randint(1000, 9999) 
             if channel not in self.zombies:
                 self.zombies[channel] = {}
             if random.random() < self.boss_chance:
