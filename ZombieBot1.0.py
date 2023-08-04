@@ -20,7 +20,7 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
         self.channel_list = channel_list
         self.zombies = {channel.lower(): {} for channel in channel_list}
         self.explosion_chance = 0.05
-        self.boss_chance = 0.90
+        self.boss_chance = 0.10
         self.boss_health = 3
         self.scores = {}
         self.bullets = {}
