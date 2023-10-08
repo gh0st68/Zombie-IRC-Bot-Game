@@ -35,8 +35,7 @@ Join Us:
 <br>
 For any queries or just to chat, hop onto IRC.TWISTEDNET.ORG. Our main channels are #DEV and #TWISTED.
 <br>
+<br>
 Credits:
 <br>
-<br>
-
 Crafted with ❤️ by gh0st.
