@@ -37,4 +37,6 @@ For any queries or just to chat, hop onto IRC.TWISTEDNET.ORG. Our main channels 
 <br>
 Credits:
 <br>
+<br>
+
 Crafted with ❤️ by gh0st.
