@@ -23,11 +23,15 @@ Commands:
 
 .shoot: Engage with the undead! This command lets users shoot at a randomly spawning zombie. Remember, you have a finite amount of bullets, so use them wisely.
 <br>
+<br>
 .reload: Out of bullets? Use this command to reload your gun. It also doubles up by repairing your weapon if it explodes, ensuring you're always ready for action.
+<br>
 <br>
 .kills: Curious about your score? The bot maintains a tally. Use this command to see where you stand.
 <br>
+<br>
 Zombies now spawn at random intervals, roughly every 1 to 2 hours, ensuring that users are always on their toes. Prepare to defend your virtual self and your comrades as you never know when a zombie will decide to crash the party!
+<br>
 <br>
 Make your IRC channel an adrenaline-pumping, action-filled battleground. Bond over strategies, celebrate collective victories, and brace yourself for intense battles against relentless hordes of zombies.
 <br>
