@@ -6,12 +6,15 @@ ZombieBot 2.0 Release
 <br>
 Let's talk about some new features in the ZombieBot 2.0 Release. In this upgraded version, we've introduced different zombie types to amp up the challenge and variability. Furthermore, the brand new zombie stats website lets you view your performance metrics with ease alongside the stats of other players. Want to host this site on your own server? Don't worry; the web code is conveniently available in the git directory.
 
-Installation:
+Requirements:
+<br>
+<br>
 Install the IRC library using pip3:
-
+<br>
 pip3 install irc
 
 About:
+<br>
 <br>
 This is a zombie-themed IRC bot that connects to your IRC network via SSL. The bot adds an exciting twist to your channel by introducing random zombie spawns. Before running the script, make sure to change the IRC server information provided at the bottom.
 
