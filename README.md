@@ -2,6 +2,7 @@
 
 
 ZombieBot 2.0 Release
+<br>
 Let's talk about some new features in the ZombieBot 2.0 Release. In this upgraded version, we've introduced different zombie types to amp up the challenge and variability. Furthermore, the brand new zombie stats website lets you view your performance metrics with ease alongside the stats of other players. Want to host this site on your own server? Don't worry; the web code is conveniently available in the git directory.
 
 Installation:
