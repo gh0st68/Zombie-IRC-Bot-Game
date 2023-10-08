@@ -31,6 +31,7 @@ Zombies now spawn at random intervals, roughly every 1 to 2 hours, ensuring that
 <br>
 Make your IRC channel an adrenaline-pumping, action-filled battleground. Bond over strategies, celebrate collective victories, and brace yourself for intense battles against relentless hordes of zombies.
 <br>
+<br>
 Join Us:
 <br>
 For any queries or just to chat, hop onto IRC.TWISTEDNET.ORG. Our main channels are #DEV and #TWISTED.
