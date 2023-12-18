@@ -165,11 +165,11 @@ class ZombieBot(irc.bot.SingleServerIRCBot):
     def handle_reloading(self, c, e):
         user = e.source.nick
         channel = e.target
-        self.bullets[user] = 5
         if self.bullets.get(user) == "exploded":
             c.privmsg(channel, f"{user}, your gun has been fixed and reloaded!")
         else:
             c.privmsg(channel, f"{user}, your gun is reloaded!")
+        self.bullets[user] = 5
 
     def print_scores(self, c, e):
         user = e.source.nick
